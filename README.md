@@ -10,6 +10,3 @@ Raw datasets are not uploaded here due to size and licensing restrictions.
 - [South German Credit (UCI)](https://archive.ics.uci.edu/ml/datasets/South+German+Credit) — credit risk dataset  
 - [Bank Marketing (UCI)](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing) — campaign response dataset  
 
-📌 To use these datasets in Colab:
-1. Download them from the links above.  
-2. Upload to Google Drive or import via `pandas.read_csv()` from local Colab uploads.  
