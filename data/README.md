@@ -2,23 +2,28 @@
 Code and experiments for MSc dissertation: Adaptive Multi-Agent Framework for SMEs.
 
 
-# Data Folder
+# MSc Dissertation 2025: Adaptive Multi-Agent AI Framework for SMEs  
 
-This folder only contains references and instructions for datasets.  
-Raw datasets are **not uploaded** here due to size and licensing restrictions.
+This repository contains the code, experiments, and supporting files for the MSc dissertation project.  
+The project investigates how SMEs can adopt AI using a modular, adaptive, multi-agent framework.  
 
-## 📊 Datasets used in this project
+## 📂 Repository Structure
+- `/data/` → references & instructions for datasets  
+- `/notebooks/` → Colab notebooks with experiments  
+- `/results/` → evaluation metrics and plots  
+- `/src/` → optional helper scripts  
 
-- [Online Retail II (UCI)](https://archive.ics.uci.edu/ml/datasets/online+retail+ii)  
-  *E-commerce transactions from a UK-based online retailer, used for customer segmentation and demand analysis.*
+## ⚙️ Methodology
+The workflow follows **CRISP-DM**:  
+1. Business understanding  
+2. Data preparation  
+3. Modelling  
+4. Evaluation  
+5. Deployment  
 
-- [South German Credit (UCI)](https://archive.ics.uci.edu/ml/datasets/South+German+Credit+%28UPDATE%29)  
-  *Credit risk dataset containing financial attributes of loan applicants, used for credit risk prediction.*
+## 🛠️ Tools
+- Google Colab (Python, pandas, scikit-learn, XGBoost)  
+- Matplotlib, Seaborn (visualisation)  
 
-- [Bank Marketing (UCI)](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing)  
-  *Direct marketing campaign data from a Portuguese bank, used for campaign response modelling.*
-
----
-
-⚠️ **Note:** All datasets are open-access and hosted by the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php).  
-They are included here by reference only to ensure reproducibility and compliance with licensing.
+## 🔒 Ethics
+All datasets are open-access (UCI Repository). No sensitive data is uploaded here.  
