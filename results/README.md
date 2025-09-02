@@ -1,14 +1,27 @@
-# Results Folder
+# Project README
 
-This folder stores **outputs generated from experiments** in the MSc dissertation project.  
+---
+## 📊 Latest Results Summary (Auto-updated)
 
-##  Contents
-- **Metrics reports** (e.g., accuracy, F1-score, RMSE, silhouette values).  
-- **Plots and visualisations** (e.g., confusion matrices, drift monitoring charts, segmentation clusters).  
-- **Intermediate artefacts** (if small, such as trained lightweight models).  
+|   credit_best_f1 |   bank_best_f1 |   retail_best_silhouette |
+|-----------------:|---------------:|-------------------------:|
+|         0.849315 |       0.572165 |                 0.607787 |
 
-##  Usage
-All results here are **generated automatically** from the notebooks in `/notebooks/`.  
-They provide evidence for evaluation and reproducibility in the dissertation.  
+### Plots
+**Credit — Confusion Matrix**  
+![](results/credit_best_cm.png)
 
-⚠️ **Note**: Large binary files (e.g., full model checkpoints) are not uploaded to GitHub due to storage limits.  
+**Bank — Confusion Matrix**  
+![](results/bank_best_cm.png)
+
+**Credit — ROC Curve**  
+![](results/credit_roc.png)
+
+**Bank — ROC Curve**  
+![](results/bank_roc.png)
+
+**Retail — Cluster Scatter**  
+![](results/retail_clusters_scatter.png)
+
+
+_Last updated: 2025-09-02 19:53 UTC_
