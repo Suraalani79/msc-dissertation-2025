@@ -1,4 +1,14 @@
 # Project README
+# 📂 Results Folder  
+
+This folder stores **outputs generated from experiments** in the MSc dissertation project.  
+
+## 📑 Contents  
+- **Metrics reports** (accuracy, F1-score, RMSE, silhouette values).  
+- **Plots and visualisations** (confusion matrices, drift monitoring charts, segmentation clusters).  
+- **Intermediate artefacts** (small items such as trained lightweight models).  
+
+---
 
 ---
 ## 📊 Latest Results Summary (Auto-updated)
