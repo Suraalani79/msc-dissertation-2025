@@ -3,4 +3,5 @@ artefact_drift_csv,artefact_drift_png,artefact_profile_csv,artefact_scatter_png,
 ,,,,,,,,,logreg_bal,,,,,,Bank Marketing (TEST),0.6215758089600308,0.9436217510259916,0.6398974797095258,0.5300778485491862,0.8071120689655172,0.66856
 ,,,,,,,,,rf_bal,,,,,,Bank Marketing (TEST),0.6735526125487701,0.9478205782112364,0.6501950585175552,0.5438723712835388,0.8081896551724138,0.26088
 ,,results/retail_cluster_profile_test.csv,results/retail_clusters_scatter_final.png,results/retail_val_silhouette.png,results/retail_k_sweep_val.csv,,,,,4.0,,0.5820433528366646,0.6051627403598738,,Retail (TEST),,,,,,
+results/bank_drift_metrics.csv,results/bank_drift_rolling_retrain.png,,,,,,,0.4660117878192534,,,,,,0.5389116270932772,Bank Drift (by month),,,,,,
 results/bank_drift_metrics.csv,results/bank_drift_rolling_retrain.png,,,,,,,0.46601178781925345,,,,,,0.5389116270932772,Bank Drift (by month),,,,,,
