@@ -121,7 +121,6 @@ _Last updated: 2025-09-08 15:35 UTC_
 
 **Credit Risk — metrics**
 
-
 | dataset     | variant         |    brier |   roc_auc |   avg_precision |
 |:------------|:----------------|---------:|----------:|----------------:|
 | Credit Risk | lr_uncalibrated | 0.155982 |  0.804267 |        0.650842 |
@@ -132,7 +131,6 @@ _Last updated: 2025-09-08 15:35 UTC_
 
 **Bank Marketing — metrics**
 
-
 | dataset        | variant         |     brier |   roc_auc |   avg_precision |
 |:---------------|:----------------|----------:|----------:|----------------:|
 | Bank Marketing | rf_uncalibrated | 0.0557258 |  0.946554 |        0.670224 |
@@ -141,7 +139,7 @@ _Last updated: 2025-09-08 15:35 UTC_
 | Bank Marketing | lr_uncalibrated | 0.0605995 |  0.942253 |        0.623388 |
 
 
-### Bank Drift (Rolling retrain)
+### Bank — Concept Drift (Rolling retrain vs. fixed)
 
 | month   |       f1 |   n_test |
 |:--------|---------:|---------:|
@@ -155,53 +153,38 @@ _Last updated: 2025-09-08 15:35 UTC_
 ### Plots
 
 **Credit — Confusion Matrix**  
-![](results/credit_best_cm.png)
-
-**Bank — Confusion Matrix**  
-![](results/bank_best_cm.png)
-
-**Credit — ROC Curve**  
-![](results/credit_roc.png)
-
-**Bank — ROC Curve**  
-![](results/bank_roc.png)
-
-**Retail — Cluster Scatter**  
-![](results/retail_clusters_scatter.png)
-
+![](credit_best_cm.png)
+**Bank — Confusion Matrix (best on TRAIN)**  
+![](bank_best_cm.png)
+**Credit — ROC Curve (TRAIN)**  
+![](credit_roc.png)
+**Bank — ROC Curve (TRAIN)**  
+![](bank_roc.png)
+**Retail — Cluster Scatter (initial)**  
+![](retail_clusters_scatter.png)
 **Bank — PR Curves (TRAIN)**  
-![](results/bank_pr_curves.png)
-
+![](bank_pr_curves.png)
 **Bank — PR Curve (TEST)**  
-![](results/bank_pr_test.png)
-
+![](bank_pr_test.png)
 **Bank — ROC Curve (TEST)**  
-![](results/bank_roc_test.png)
-
+![](bank_roc_test.png)
 **Bank — CM (TEST, Logistic Regression)**  
-![](results/bank_cm_test_logreg_bal.png)
-
+![](bank_cm_test_logreg_bal.png)
 **Bank — CM (TEST, Random Forest)**  
-![](results/bank_cm_test_rf_bal.png)
-
+![](bank_cm_test_rf_bal.png)
 **Credit — Calibration (TEST)**  
-![](results/credit_calibration.png)
-
+![](credit_calibration.png)
 **Bank — Calibration (TEST)**  
-![](results/bank_calibration.png)
-
+![](bank_calibration.png)
 **Retail — Validation Silhouette vs k**  
-![](results/retail_val_silhouette.png)
-
+![](retail_val_silhouette.png)
 **Retail — Cluster Scatter (final)**  
-![](results/retail_clusters_scatter_final.png)
-
+![](retail_clusters_scatter_final.png)
 **Bank — Rolling retraining vs fixed model (concept drift)**  
-![](results/bank_drift_rolling_retrain.png)
+![](bank_drift_rolling_retrain.png)
 
 
 
-_Last updated: 2025-09-08 17:02 UTC_
-
+_Last updated: 2025-09-08 18:04 UTC_
 
 <!-- AUTO-SUMMARY:END -->
