@@ -1,31 +1,28 @@
-# Results Summary
+# Master Results Summary
 
-This document summarises the key outcomes across all tasks (Credit risk, Bank marketing, Retail segmentation) and provides file references to plots/metrics stored in the repository.
+This appendix consolidates the key outcomes across **Credit Risk**, **Bank Marketing**, and **Retail Segmentation** tasks.
 
-## Key Metrics
+## Headline snapshot
 
-- **Credit risk — best model:** `logreg`, **F1:** 0.849
+| timestamp_utc           | credit_best_model   |   credit_best_f1 | bank_best_model   |   bank_best_f1 |   retail_best_k |   retail_best_silhouette |   drift_fixed_f1 |   drift_rolling_mean_f1 |   credit_best_brier | credit_best_calibration         |   bank_best_brier | bank_best_calibration           |
+|:------------------------|:--------------------|-----------------:|:------------------|---------------:|----------------:|-------------------------:|-----------------:|------------------------:|--------------------:|:--------------------------------|------------------:|:--------------------------------|
+| 2025-09-09 13:14:15 UTC | logreg              |         0.849315 | rf                |       0.572165 |               4 |                 0.605163 |         0.466012 |                0.538912 |            0.155982 | lr_uncalibrated (ROC_AUC=0.804) |         0.0557258 | rf_uncalibrated (ROC_AUC=0.947) |
 
-- **Bank marketing — best model:** `rf`, **F1:** 0.572
+### Overview plot
 
-- **Retail segmentation — best k:** 5, **Silhouette:** 0.608
+![](results/meta_overview_scores.png)
 
-- **Retail cluster sizes:** Cluster 0: 3840, Cluster 1: 2002, Cluster 2: 35, Cluster 3: 4
+## Bank Marketing — Concept Drift
 
-## Files & Plots
+| month   |       f1 |   n_test |
+|:--------|---------:|---------:|
+| aug     | 0.376975 |     6178 |
+| sep     | 0.718053 |      570 |
+| oct     | 0.489451 |      718 |
+| nov     | 0.486702 |     4101 |
+| dec     | 0.623377 |      182 |
 
-- Credit metrics CSV: `results/credit_metrics.csv`
+![](results/bank_drift_rolling_retrain.png)
 
-- Bank metrics CSV: `results/bank_metrics.csv`
 
-- Silhouette sweep CSV: `results/silhouette_scores.csv`
-
-- Credit confusion matrix: `results/credit_best_cm.png`
-
-- Bank confusion matrix: `results/bank_best_cm.png`
-
-- Retail clusters scatter: `results/retail_clusters_scatter.png`
-
-- Credit ROC curve: `results/credit_roc.png`
-
-- Bank ROC curve: `results/bank_roc.png`
+_Last compiled: 2025-09-09 13:14 UTC_
