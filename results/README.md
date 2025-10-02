@@ -1,63 +1,212 @@
-# Project README
+# 📂 Results Folder
+This folder stores **outputs generated from experiments** in the MSc dissertation project.
 
----
+## 📑 Contents
+- **Metrics reports** (accuracy, F1-score, AP/AUC, calibration, silhouette values).
+- **Plots and visualisations** (confusion matrices, ROC/PR curves, calibration, segmentation clusters, feature importance).
+- **Intermediate artefacts** (CSV summaries).
+
 ## 📊 Latest Results Summary (Auto-updated)
 
-| artefact_profile_csv                    | artefact_scatter_png                      | artefact_val_plot_png             | artefact_val_sweep_csv         |   bank_best_f1 |   credit_best_f1 | model      |   retail_best_k_val |   retail_best_silhouette |   retail_test_silhouette |   retail_val_silhouette | task                  |    test_AP |   test_ROC_AUC |   test_f1@thr |   test_precision@thr |   test_recall@thr |   tuned_threshold(val) |
-|:----------------------------------------|:------------------------------------------|:----------------------------------|:-------------------------------|---------------:|-----------------:|:-----------|--------------------:|-------------------------:|-------------------------:|------------------------:|:----------------------|-----------:|---------------:|--------------:|---------------------:|------------------:|-----------------------:|
-| nan                                     | nan                                       | nan                               | nan                            |       0.572165 |         0.849315 | nan        |                 nan |                 0.607787 |               nan        |              nan        | nan                   | nan        |     nan        |    nan        |           nan        |        nan        |              nan       |
-| nan                                     | nan                                       | nan                               | nan                            |     nan        |       nan        | logreg_bal |                 nan |               nan        |               nan        |              nan        | Bank Marketing (TEST) |   0.621576 |       0.943622 |      0.639897 |             0.530078 |          0.807112 |                0.66856 |
-| nan                                     | nan                                       | nan                               | nan                            |     nan        |       nan        | rf_bal     |                 nan |               nan        |               nan        |              nan        | Bank Marketing (TEST) |   0.673553 |       0.947821 |      0.650195 |             0.543872 |          0.80819  |                0.26088 |
-| results/retail_cluster_profile_test.csv | results/retail_clusters_scatter_final.png | results/retail_val_silhouette.png | results/retail_k_sweep_val.csv |     nan        |       nan        | nan        |                   4 |               nan        |                 0.582043 |                0.605163 | Retail (TEST)         | nan        |     nan        |    nan        |           nan        |        nan        |              nan       |
+|   artefact_profile_csv |   artefact_scatter_png |   artefact_val_plot_png |   artefact_val_sweep_csv |   bank_best_f1 |   credit_best_f1 |   model |   retail_best_k_val |   retail_best_silhouette |   retail_test_silhouette |   retail_val_silhouette |   task |   test_AP |   test_ROC_AUC |   test_f1@thr |   test_precision@thr |   test_recall@thr |   tuned_threshold(val) |
+|-----------------------:|-----------------------:|------------------------:|-------------------------:|---------------:|-----------------:|--------:|--------------------:|-------------------------:|-------------------------:|------------------------:|-------:|----------:|---------------:|--------------:|---------------------:|------------------:|-----------------------:|
+|                    nan |                    nan |                     nan |                      nan |       0.572165 |         0.849315 |     nan |                 nan |                 0.607787 |                      nan |                     nan |    nan |       nan |            nan |           nan |                  nan |               nan |                    nan |
 
-### Plots
+## Probability Calibration (TEST)
+
+**Credit Risk — metrics**
+
+| dataset     | variant         |    brier |   roc_auc |   avg_precision |
+|:------------|:----------------|---------:|----------:|----------------:|
+| Credit Risk | lr_uncalibrated | 0.155982 |  0.804267 |        0.650842 |
+| Credit Risk | lr_sigmoid      | 0.157097 |  0.805486 |        0.657833 |
+| Credit Risk | lr_isotonic     | 0.159576 |  0.800914 |        0.655262 |
+| Credit Risk | rf_uncalibrated | 0.16343  |  0.794171 |        0.602718 |
+
+**Bank Marketing — metrics**
+
+| dataset        | variant         |     brier |   roc_auc |   avg_precision |
+|:---------------|:----------------|----------:|----------:|----------------:|
+| Bank Marketing | rf_uncalibrated | 0.0557258 |  0.946554 |        0.670224 |
+| Bank Marketing | lr_isotonic     | 0.0582391 |  0.942258 |        0.622466 |
+| Bank Marketing | lr_sigmoid      | 0.0605729 |  0.942251 |        0.623669 |
+| Bank Marketing | lr_uncalibrated | 0.0605995 |  0.942253 |        0.623388 |
+
+## Plots
+
 **Credit — Confusion Matrix**  
-![](results/credit_best_cm.png)
+![](credit_best_cm.png)
 
-**Bank — Confusion Matrix**  
-![](results/bank_best_cm.png)
+**Bank — Confusion Matrix (best on TRAIN)**  
+![](bank_best_cm.png)
 
 **Credit — ROC Curve**  
-![](results/credit_roc.png)
+![](credit_roc.png)
 
 **Bank — ROC Curve (TRAIN)**  
-![](results/bank_roc.png)
-
-**Retail — Cluster Scatter (early)**  
-![](results/retail_clusters_scatter.png)
+![](bank_roc.png)
 
 **Bank — PR Curves (TRAIN)**  
-![](results/bank_pr_curves.png)
+![](bank_pr_curves.png)
 
 **Bank — PR Curve (TEST)**  
-![](results/bank_pr_test.png)
+![](bank_pr_test.png)
 
 **Bank — ROC Curve (TEST)**  
-![](results/bank_roc_test.png)
+![](bank_roc_test.png)
 
-**Bank — Confusion Matrix (TEST, Logistic Reg)**  
-![](results/bank_cm_test_logreg_bal.png)
+**Bank — Confusion Matrix (TEST, Logistic Regression)**  
+![](bank_cm_test_logreg_bal.png)
 
 **Bank — Confusion Matrix (TEST, Random Forest)**  
-![](results/bank_cm_test_rf_bal.png)
+![](bank_cm_test_rf_bal.png)
+
+**Credit — Calibration (TEST)**  
+![](credit_calibration.png)
+
+**Bank — Calibration (TEST)**  
+![](bank_calibration.png)
+
+**Credit — Permutation Importance**  
+![](credit_perm_importance_AGG.png)  
+![](credit_perm_importance_EXP.png)
+
+**Bank — Permutation Importance**  
+![](bank_perm_importance_AGG.png)  
+![](bank_perm_importance_EXP.png)
+
+**Retail — Cluster Scatter (from Step 8)**  
+![](retail_clusters_scatter.png)
+
+**Retail — Validation Silhouette vs k (Step 14)**  
+![](retail_val_silhouette.png)
+
+**Retail — Cluster Scatter (final model, Step 14)**  
+![](retail_clusters_scatter_final.png)
+
+
+## Key CSV artefacts
+
+- `summary_master.csv`
+- `summary.csv`
+- `master_results_summary.csv`
+- `credit_calibration_metrics.csv`
+- `bank_calibration_metrics.csv`
+- `bank_threshold_tuning.csv`
+- `bank_train_test_eval.csv`
+- `silhouette_scores.csv`
+- `retail_k_sweep_val.csv`
+- `retail_cluster_profile_test.csv`
+- `credit_perm_importance_AGG.csv`
+- `credit_perm_importance_EXP.csv`
+- `bank_perm_importance_AGG.csv`
+- `bank_perm_importance_EXP.csv`
+
+_Last updated: 2025-10-02 15:15 UTC_
+
+<!-- AUTO-SUMMARY:BEGIN -->
+## 📊 Latest Results Summary (Auto-updated)
+
+### Snapshot metrics
+|   credit_best_f1 |   bank_best_f1 |   retail_best_silhouette |
+|-----------------:|---------------:|-------------------------:|
+|         0.849315 |       0.572165 |                 0.607787 |
+
+### Probability Calibration (TEST)
+**Credit Risk — metrics**
+
+| dataset     | variant         |    brier |   roc_auc |   avg_precision |
+|:------------|:----------------|---------:|----------:|----------------:|
+| Credit Risk | lr_uncalibrated | 0.155982 |  0.804267 |        0.650842 |
+| Credit Risk | lr_sigmoid      | 0.157097 |  0.805486 |        0.657833 |
+| Credit Risk | lr_isotonic     | 0.159576 |  0.800914 |        0.655262 |
+| Credit Risk | rf_uncalibrated | 0.16343  |  0.794171 |        0.602718 |
+
+**Bank Marketing — metrics**
+
+| dataset        | variant         |     brier |   roc_auc |   avg_precision |
+|:---------------|:----------------|----------:|----------:|----------------:|
+| Bank Marketing | rf_uncalibrated | 0.0557258 |  0.946554 |        0.670224 |
+| Bank Marketing | lr_isotonic     | 0.0582391 |  0.942258 |        0.622466 |
+| Bank Marketing | lr_sigmoid      | 0.0605729 |  0.942251 |        0.623669 |
+| Bank Marketing | lr_uncalibrated | 0.0605995 |  0.942253 |        0.623388 |
+
+### Bank — Concept Drift (Rolling retrain vs fixed)
+| month   |       f1 |   n_test |
+|:--------|---------:|---------:|
+| aug     | 0.376975 |     6178 |
+| sep     | 0.718053 |      570 |
+| oct     | 0.489451 |      718 |
+| nov     | 0.486702 |     4101 |
+| dec     | 0.623377 |      182 |
+
+## Plots
+**Credit — Confusion Matrix (best)**  
+![](credit_best_cm.png)
+
+**Bank — Confusion Matrix (best on TRAIN)**  
+![](bank_best_cm.png)
+
+**Credit — ROC Curve**  
+![](credit_roc.png)
+
+**Bank — ROC Curve (TRAIN)**  
+![](bank_roc.png)
+
+**Retail — Cluster Scatter**  
+![](retail_clusters_scatter.png)
+
+**Bank — PR Curves (TRAIN)**  
+![](bank_pr_curves.png)
+
+**Bank — PR Curve (TEST)**  
+![](bank_pr_test.png)
+
+**Bank — ROC Curve (TEST)**  
+![](bank_roc_test.png)
+
+**Bank — CM (TEST, Logistic Regression)**  
+![](bank_cm_test_logreg_bal.png)
+
+**Bank — CM (TEST, Random Forest)**  
+![](bank_cm_test_rf_bal.png)
+
+**Credit — Calibration (TEST)**  
+![](credit_calibration.png)
+
+**Bank — Calibration (TEST)**  
+![](bank_calibration.png)
 
 **Retail — Validation Silhouette vs k**  
-![](results/retail_val_silhouette.png)
+![](retail_val_silhouette.png)
 
-**Retail — Cluster Scatter (final model)**  
-![](results/retail_clusters_scatter_final.png)
+**Retail — Cluster Scatter (final)**  
+![](retail_clusters_scatter_final.png)
 
-**Credit — Permutation Importance (AGG)**  
-![](results/credit_perm_importance_AGG.png)
+**Bank — Rolling retrain vs fixed (concept drift)**  
+![](bank_drift_rolling_retrain.png)
 
-**Credit — Permutation Importance (EXP)**  
-![](results/credit_perm_importance_EXP.png)
+**Credit — Error Analysis (TEST CM)**  
+![](credit_error_analysis_cm.png)
 
-**Bank — Permutation Importance (AGG)**  
-![](results/bank_perm_importance_AGG.png)
-
-**Bank — Permutation Importance (EXP)**  
-![](results/bank_perm_importance_EXP.png)
+**Master overview — best scores**  
+![](meta_overview_scores.png)
 
 
-_Last updated: 2025-10-02 15:14 UTC_
+**Other plots**
+
+![](bank_perm_importance_AGG.png)
+
+![](bank_perm_importance_EXP.png)
+
+![](credit_perm_importance_AGG.png)
+
+![](credit_perm_importance_EXP.png)
+
+
+**Credit — Error cases CSV:** `credit_error_cases.csv`
+
+_Last updated: 2025-10-02 16:44 UTC_
+<!-- AUTO-SUMMARY:END -->
+
+
