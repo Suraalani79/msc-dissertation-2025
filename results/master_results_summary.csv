@@ -1,2 +1,2 @@
 timestamp_utc,credit_best_model,credit_best_f1,bank_best_model,bank_best_f1,retail_best_k,retail_best_silhouette,drift_fixed_f1,drift_rolling_mean_f1,credit_best_brier,credit_best_calibration,bank_best_brier,bank_best_calibration
-2025-09-09 13:14:15 UTC,logreg,0.849315068,rf,0.572164948,4,0.60516274,0.466011788,0.538911627,0.155982423,lr_uncalibrated (ROC_AUC=0.804),0.055725778,rf_uncalibrated (ROC_AUC=0.947)
+2025-10-02 15:17:25 UTC,logreg,0.8493150684931506,rf,0.5721649484536082,4,0.6051627403598738,0.4660117878192534,0.5389116270932772,0.1559824231680222,lr_uncalibrated (ROC_AUC=0.804),0.0557257777346152,rf_uncalibrated (ROC_AUC=0.947)
