@@ -109,42 +109,61 @@ _Last updated: 2025-10-02 15:15 UTC_
 ## 📊 Latest Results Summary (Auto-updated)
 
 
-### Credit — Error Analysis (misclassified examples)
-
-| C1   |   C2 | C3   | C4   |   C5 | C6   | C7   |   C8 | C9   | C10   |   C11 | C12   |   C13 | C14   | C15   |   C16 | C17   |   C18 | C19   | C20   |   true |   pred |   proba_class2 | error_type     |
-|:-----|-----:|:-----|:-----|-----:|:-----|:-----|-----:|:-----|:------|------:|:------|------:|:------|:------|------:|:------|------:|:------|:------|-------:|-------:|---------------:|:---------------|
-| A13  |   15 | A32  | A46  | 1905 | A61  | A75  |    4 | A93  | A101  |     4 | A123  |    40 | A143  | A151  |     1 | A174  |     1 | A192  | A201  |      1 |      2 |       0.524413 | False Positive |
-| A14  |   27 | A32  | A40  | 2570 | A61  | A73  |    3 | A92  | A101  |     3 | A121  |    21 | A143  | A151  |     1 | A173  |     1 | A191  | A201  |      2 |      1 |       0.412744 | False Negative |
-| A11  |   30 | A32  | A41  | 3857 | A61  | A73  |    4 | A91  | A101  |     4 | A122  |    40 | A143  | A152  |     1 | A174  |     1 | A192  | A201  |      1 |      2 |       0.542244 | False Positive |
-| A12  |   36 | A32  | A41  | 9398 | A61  | A72  |    1 | A94  | A101  |     4 | A123  |    28 | A143  | A151  |     1 | A174  |     1 | A192  | A201  |      2 |      1 |       0.483553 | False Negative |
-| A11  |   24 | A34  | A40  | 1199 | A61  | A75  |    4 | A93  | A101  |     4 | A123  |    60 | A143  | A152  |     2 | A172  |     1 | A191  | A201  |      2 |      1 |       0.371683 | False Negative |
-
-
 ### Plots
 
-**Credit — Confusion Matrix (TEST)**  
-![](results/credit_error_analysis_cm.png)
+**Credit — Confusion Matrix**  
+![](results/credit_best_cm.png)
 
-**Bank — Rolling retraining vs. fixed model**  
-![](results/bank_drift_rolling_retrain.png)
+**Bank — Confusion Matrix**  
+![](results/bank_best_cm.png)
 
-**Bank — Calibration (TEST)**  
-![](results/bank_calibration.png)
+**Credit — ROC Curve**  
+![](results/credit_roc.png)
 
-**Credit — Calibration (TEST)**  
-![](results/credit_calibration.png)
+**Bank — ROC Curve**  
+![](results/bank_roc.png)
 
-**Bank — ROC Curve (TEST)**  
-![](results/bank_roc_test.png)
+**Retail — Cluster Scatter**  
+![](results/retail_clusters_scatter.png)
+
+**Bank — PR Curves (TRAIN)**  
+![](results/bank_pr_curves.png)
 
 **Bank — PR Curve (TEST)**  
 ![](results/bank_pr_test.png)
 
+**Bank — ROC Curve (TEST)**  
+![](results/bank_roc_test.png)
+
+**Bank — CM (TEST, Logistic Regression)**  
+![](results/bank_cm_test_logreg_bal.png)
+
+**Bank — CM (TEST, Random Forest)**  
+![](results/bank_cm_test_rf_bal.png)
+
+**Credit — Calibration (TEST)**  
+![](results/credit_calibration.png)
+
+**Bank — Calibration (TEST)**  
+![](results/bank_calibration.png)
+
+**Retail — Validation Silhouette vs k**  
+![](results/retail_val_silhouette.png)
+
 **Retail — Cluster Scatter (final)**  
 ![](results/retail_clusters_scatter_final.png)
 
+**Bank — Rolling retraining vs fixed model (concept drift)**  
+![](results/bank_drift_rolling_retrain.png)
 
-_Last updated: 2025-10-02 16:58 UTC_
+**Credit — Error Analysis (TEST CM)**  
+![](results/credit_error_analysis_cm.png)
+
+
+**Credit — Error cases CSV:** `credit_error_cases.csv`
+
+
+_Last updated: 2025-10-02 17:04 UTC_
 
 <!-- AUTO-SUMMARY:END -->
 
